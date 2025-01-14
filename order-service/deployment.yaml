@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: order-service-service
+  template:
+    metadata:
+      labels:
+        app: order-service-service
+    spec:
+      containers:
+      - name: order-service
+        image: selimhorri/order-service-ecommerce-boot:latest
+        ports:
+        - containerPort: 8080
