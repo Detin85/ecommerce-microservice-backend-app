@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/SelimHorri/ecommerce-microservice-backend-app/user-service.git'
+                git 'https://github.com/Detin85/ecommerce-microservice-backend-app/user-service.git'
             }
         }
         stage('Build') {
